@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             btn.classList.toggle('favorited');
             if (btn.classList.contains('favorited')) {
-                btn.textContent = 'Favorito!';
+                btn.textContent = '★ Favorito!';
             } else {
                 btn.textContent = 'Favoritar';
             }
@@ -38,4 +38,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-

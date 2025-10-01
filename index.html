@@ -1,96 +1,421 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livros Infantis</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao Mundo dos Livros Infantis!</h1>
-        <p>Descubra novas aventuras, autores e muita diversão!</p>
-    </header>
-    <main>
-        <div class="book-grid">
-            <!-- LIVROS EXEMPLO - repita o bloco abaixo mudando detalhes para cada livro -->
-            <!-- Usei imagens de bancos gratuitos (Unsplash, Pixabay) e SVGs coloridos como exemplo -->
-            <!-- Livro 1 -->
-            <section class="book" id="book1">
-                <img class="book-cover" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=300&h=400&facepad=3&q=80" alt="Capa Livro 1 - A Floresta Encantada">
-                <h2>A Floresta Encantada</h2>
-                <p class="author">Autor: Ana Silva</p>
-                <p class="age">Faixa etária: 6-8 anos</p>
-                <p>Uma aventura mágica em uma floresta cheia de animais falantes.</p>
-                <div class="interactives">
-                    <button class="like-btn" data-book="book1"><span class="icon-heart"></span> Curtir</button>
-                    <button class="fav-btn" data-book="book1"><span class="icon-star"></span> Favoritar</button>
-                    <button class="share-btn" data-book="book1"><span class="icon-share"></span> Compartilhar</button>
-                    <span class="like-count" id="like-count-book1">0 curtidas</span>
-                </div>
-                <div class="svg-drawing">
-                    <!-- SVG animado de árvore -->
-                    <svg width="50" height="50" viewBox="0 0 50 50">
-                        <ellipse cx="25" cy="35" rx="12" ry="10" fill="#228B22"/>
-                        <ellipse cx="25" cy="25" rx="16" ry="12" fill="#32CD32"/>
-                        <rect x="20" y="40" width="10" height="8" fill="#A0522D"/>
-                    </svg>
-                </div>
-            </section>
-            <!-- Livro 2 -->
-            <section class="book" id="book2">
-                <img class="book-cover" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=300&h=400&facepad=3&q=80" alt="Capa Livro 2 - O Pequeno Astronauta">
-                <h2>O Pequeno Astronauta</h2>
-                <p class="author">Autor: João Souza</p>
-                <p class="age">Faixa etária: 7-10 anos</p>
-                <p>Uma jornada divertida pelo espaço sideral.</p>
-                <div class="interactives">
-                    <button class="like-btn" data-book="book2"><span class="icon-heart"></span> Curtir</button>
-                    <button class="fav-btn" data-book="book2"><span class="icon-star"></span> Favoritar</button>
-                    <button class="share-btn" data-book="book2"><span class="icon-share"></span> Compartilhar</button>
-                    <span class="like-count" id="like-count-book2">0 curtidas</span>
-                </div>
-                <div class="svg-drawing">
-                    <!-- SVG animado de foguete -->
-                    <svg width="50" height="50" viewBox="0 0 50 50">
-                        <polygon points="25,5 35,45 25,35 15,45" fill="#87CEEB"/>
-                        <circle cx="25" cy="20" r="6" fill="#fff"/>
-                        <rect x="22" y="35" width="6" height="10" fill="#FF4500"/>
-                    </svg>
-                </div>
-            </section>
-            <!-- LIVROS 3 A 20: Siga o mesmo padrão abaixo -->
-            <section class="book" id="book3">
-                <img class="book-cover" src="https://cdn.pixabay.com/photo/2017/01/31/13/14/book-2022464_1280.png" alt="Capa Livro 3 - O Reino do Arco-Íris">
-                <h2>O Reino do Arco-Íris</h2>
-                <p class="author">Autor: Lúcia Prado</p>
-                <p class="age">Faixa etária: 5-7 anos</p>
-                <p>Descubra um mundo de cores onde tudo ganha vida!</p>
-                <div class="interactives">
-                    <button class="like-btn" data-book="book3"><span class="icon-heart"></span> Curtir</button>
-                    <button class="fav-btn" data-book="book3"><span class="icon-star"></span> Favoritar</button>
-                    <button class="share-btn" data-book="book3"><span class="icon-share"></span> Compartilhar</button>
-                    <span class="like-count" id="like-count-book3">0 curtidas</span>
-                </div>
-                <div class="svg-drawing">
-                    <!-- SVG arco-íris -->
-                    <svg width="50" height="25">
-                        <ellipse cx="25" cy="25" rx="20" ry="10" fill="none" stroke="red" stroke-width="4"/>
-                        <ellipse cx="25" cy="25" rx="16" ry="8" fill="none" stroke="orange" stroke-width="4"/>
-                        <ellipse cx="25" cy="25" rx="12" ry="6" fill="none" stroke="yellow" stroke-width="4"/>
-                        <ellipse cx="25" cy="25" rx="8" ry="4" fill="none" stroke="green" stroke-width="4"/>
-                        <ellipse cx="25" cy="25" rx="4" ry="2" fill="none" stroke="blue" stroke-width="4"/>
-                    </svg>
-                </div>
-            </section>
-            <!-- ... Repita até o livro 20, mudando nomes e imagens ... -->
-            <!-- LIVROS 4 A 20 (omiti para não deixar a resposta gigante, mas posso te entregar a lista completa se quiser!) -->
-        </div>
-    </main>
-    <footer>
-        <p>© 2025 Livros Infantis</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-
+<!-- LIVRO 1 -->
+<section class="book" id="book1">
+    <img class="book-cover" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=300&h=400&facepad=3&q=80" alt="Capa Livro 1 - A Floresta Encantada">
+    <h2>A Floresta Encantada</h2>
+    <p class="author">Autor: Ana Silva</p>
+    <p class="age">Faixa etária: 6-8 anos</p>
+    <p>Uma aventura mágica em uma floresta cheia de animais falantes.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book1"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book1"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book1"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book1">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50" viewBox="0 0 50 50">
+            <ellipse cx="25" cy="35" rx="12" ry="10" fill="#228B22"/>
+            <ellipse cx="25" cy="25" rx="16" ry="12" fill="#32CD32"/>
+            <rect x="20" y="40" width="10" height="8" fill="#A0522D"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 2 -->
+<section class="book" id="book2">
+    <img class="book-cover" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=300&h=400&facepad=3&q=80" alt="Capa Livro 2 - O Pequeno Astronauta">
+    <h2>O Pequeno Astronauta</h2>
+    <p class="author">Autor: João Souza</p>
+    <p class="age">Faixa etária: 7-10 anos</p>
+    <p>Uma jornada divertida pelo espaço sideral.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book2"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book2"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book2"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book2">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50" viewBox="0 0 50 50">
+            <polygon points="25,5 35,45 25,35 15,45" fill="#87CEEB"/>
+            <circle cx="25" cy="20" r="6" fill="#fff"/>
+            <rect x="22" y="35" width="6" height="10" fill="#FF4500"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 3 -->
+<section class="book" id="book3">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2017/01/31/13/14/book-2022464_1280.png" alt="Capa Livro 3 - O Reino do Arco-Íris">
+    <h2>O Reino do Arco-Íris</h2>
+    <p class="author">Autor: Lúcia Prado</p>
+    <p class="age">Faixa etária: 5-7 anos</p>
+    <p>Descubra um mundo de cores onde tudo ganha vida!</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book3"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book3"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book3"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book3">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="25">
+            <ellipse cx="25" cy="25" rx="20" ry="10" fill="none" stroke="red" stroke-width="4"/>
+            <ellipse cx="25" cy="25" rx="16" ry="8" fill="none" stroke="orange" stroke-width="4"/>
+            <ellipse cx="25" cy="25" rx="12" ry="6" fill="none" stroke="yellow" stroke-width="4"/>
+            <ellipse cx="25" cy="25" rx="8" ry="4" fill="none" stroke="green" stroke-width="4"/>
+            <ellipse cx="25" cy="25" rx="4" ry="2" fill="none" stroke="blue" stroke-width="4"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 4 -->
+<section class="book" id="book4">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2016/03/27/18/53/book-1283865_1280.jpg" alt="Capa Livro 4 - O Mistério do Castelo">
+    <h2>O Mistério do Castelo</h2>
+    <p class="author">Autor: Pedro Nunes</p>
+    <p class="age">Faixa etária: 8-11 anos</p>
+    <p>Um grupo de amigos encontra segredos antigos em um castelo abandonado.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book4"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book4"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book4"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book4">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <rect x="12" y="25" width="26" height="18" fill="#c0c0c0"/>
+            <rect x="18" y="34" width="8" height="9" fill="#a0522d"/>
+            <rect x="24" y="28" width="8" height="6" fill="#8b0000"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 5 -->
+<section class="book" id="book5">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2017/08/06/07/32/book-2594562_1280.jpg" alt="Capa Livro 5 - A Ilha dos Piratas">
+    <h2>A Ilha dos Piratas</h2>
+    <p class="author">Autor: Marina Costa</p>
+    <p class="age">Faixa etária: 7-9 anos</p>
+    <p>Aventuras em alto-mar em busca de um tesouro perdido!</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book5"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book5"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book5"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book5">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <circle cx="25" cy="25" r="20" fill="#ffe4b5"/>
+            <rect x="20" y="30" width="10" height="15" fill="#deb887"/>
+            <polygon points="25,10 30,35 20,35" fill="#228b22"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 6 -->
+<section class="book" id="book6">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2016/11/29/06/15/book-1868070_1280.jpg" alt="Capa Livro 6 - O Menino e o Robô">
+    <h2>O Menino e o Robô</h2>
+    <p class="author">Autor: Lucas Lima</p>
+    <p class="age">Faixa etária: 6-8 anos</p>
+    <p>Uma amizade entre um menino curioso e um robô incrível.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book6"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book6"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book6"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book6">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <rect x="15" y="20" width="20" height="20" fill="#b0c4de"/>
+            <circle cx="25" cy="20" r="10" fill="#708090"/>
+            <rect x="22" y="40" width="6" height="6" fill="#4682b4"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 7 -->
+<section class="book" id="book7">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2014/10/23/18/05/book-500498_1280.jpg" alt="Capa Livro 7 - A Princesa do Norte">
+    <h2>A Princesa do Norte</h2>
+    <p class="author">Autor: Rita Borges</p>
+    <p class="age">Faixa etária: 6-9 anos</p>
+    <p>Uma princesa corajosa enfrenta desafios para salvar seu reino gelado.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book7"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book7"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book7"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book7">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <polygon points="25,5 45,45 5,45" fill="#b2e6ff"/>
+            <ellipse cx="25" cy="40" rx="15" ry="5" fill="#e0f7fa"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 8 -->
+<section class="book" id="book8">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2015/09/18/18/51/africa-942362_1280.jpg" alt="Capa Livro 8 - Safari na Savana">
+    <h2>Safari na Savana</h2>
+    <p class="author">Autor: Davi Mendes</p>
+    <p class="age">Faixa etária: 7-10 anos</p>
+    <p>Descubra os animais mais incríveis em uma expedição africana.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book8"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book8"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book8"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book8">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="40" rx="20" ry="7" fill="#eedd82"/>
+            <rect x="22" y="25" width="6" height="15" fill="#daa520"/>
+            <ellipse cx="25" cy="32" rx="10" ry="4" fill="#f4a460"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 9 -->
+<section class="book" id="book9">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2017/08/06/07/32/book-2594562_1280.jpg" alt="Capa Livro 9 - A Cidade dos Gatos">
+    <h2>A Cidade dos Gatos</h2>
+    <p class="author">Autor: Sofia Ramos</p>
+    <p class="age">Faixa etária: 5-8 anos</p>
+    <p>Conheça uma cidade onde todos os moradores são gatos divertidos.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book9"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book9"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book9"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book9">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="40" rx="14" ry="8" fill="#ffe4e1"/>
+            <ellipse cx="18" cy="30" rx="4" ry="6" fill="#ffc0cb"/>
+            <ellipse cx="32" cy="30" rx="4" ry="6" fill="#ffc0cb"/>
+            <rect x="20" y="44" width="10" height="6" fill="#ddd"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 10 -->
+<section class="book" id="book10">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2014/10/23/18/05/book-500498_1280.jpg" alt="Capa Livro 10 - O Dragão Azul">
+    <h2>O Dragão Azul</h2>
+    <p class="author">Autor: Tiago Lopes</p>
+    <p class="age">Faixa etária: 8-11 anos</p>
+    <p>Uma criança encontra um dragão azul e descobre um reino secreto.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book10"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book10"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book10"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book10">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="40" rx="13" ry="7" fill="#b0e0e6"/>
+            <polygon points="25,10 30,30 20,30" fill="#4682b4"/>
+            <rect x="22" y="30" width="6" height="15" fill="#4682b4"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 11 -->
+<section class="book" id="book11">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2016/03/27/18/53/book-1283865_1280.jpg" alt="Capa Livro 11 - O Segredo do Sótão">
+    <h2>O Segredo do Sótão</h2>
+    <p class="author">Autor: Carla Martins</p>
+    <p class="age">Faixa etária: 7-9 anos</p>
+    <p>O que será que está escondido no sótão da vovó?</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book11"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book11"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book11"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book11">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <rect x="10" y="30" width="30" height="15" fill="#deb887"/>
+            <polygon points="25,10 10,30 40,30" fill="#a0522d"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 12 -->
+<section class="book" id="book12">
+    <img class="book-cover" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=300&h=400&facepad=3&q=80" alt="Capa Livro 12 - O Jardim das Borboletas">
+    <h2>O Jardim das Borboletas</h2>
+    <p class="author">Autor: Bruna Teixeira</p>
+    <p class="age">Faixa etária: 5-7 anos</p>
+    <p>Um jardim encantado cheio de borboletas mágicas e flores coloridas.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book12"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book12"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book12"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book12">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="40" rx="14" ry="7" fill="#e0ffe0"/>
+            <ellipse cx="18" cy="32" rx="4" ry="7" fill="#dda0dd"/>
+            <ellipse cx="32" cy="32" rx="4" ry="7" fill="#dda0dd"/>
+            <circle cx="25" cy="32" r="3" fill="#ffb6c1"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 13 -->
+<section class="book" id="book13">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2016/11/29/06/15/book-1868070_1280.jpg" alt="Capa Livro 13 - O Circo dos Sonhos">
+    <h2>O Circo dos Sonhos</h2>
+    <p class="author">Autor: Paulo Vieira</p>
+    <p class="age">Faixa etária: 6-8 anos</p>
+    <p>Um circo mágico onde cada número é uma surpresa diferente.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book13"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book13"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book13"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book13">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="40" rx="18" ry="6" fill="#fffacd"/>
+            <ellipse cx="25" cy="30" rx="10" ry="6" fill="#f08080"/>
+            <polygon points="15,30 25,10 35,30" fill="#87ceeb"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 14 -->
+<section class="book" id="book14">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2017/01/31/13/14/book-2022464_1280.png" alt="Capa Livro 14 - A Fada das Estações">
+    <h2>A Fada das Estações</h2>
+    <p class="author">Autor: Gabriela Reis</p>
+    <p class="age">Faixa etária: 5-8 anos</p>
+    <p>Uma fada leva as crianças para uma viagem pelas estações do ano.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book14"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book14"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book14"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book14">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <circle cx="25" cy="25" r="12" fill="#ffd700"/>
+            <ellipse cx="25" cy="40" rx="12" ry="6" fill="#98fb98"/>
+            <ellipse cx="25" cy="10" rx="7" ry="3" fill="#87ceeb"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 15 -->
+<section class="book" id="book15">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2017/08/06/07/32/book-2594562_1280.jpg" alt="Capa Livro 15 - O Balão Vermelho">
+    <h2>O Balão Vermelho</h2>
+    <p class="author">Autor: Felipe Matos</p>
+    <p class="age">Faixa etária: 4-6 anos</p>
+    <p>Um balão vermelho voa pelo céu vivendo aventuras incríveis.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book15"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book15"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book15"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book15">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="20" rx="9" ry="12" fill="#ff4444"/>
+            <rect x="22" y="32" width="6" height="12" fill="#a0522d"/>
+            <line x1="25" y1="44" x2="25" y2="50" stroke="#a0522d" stroke-width="2"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 16 -->
+<section class="book" id="book16">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2016/03/27/18/53/book-1283865_1280.jpg" alt="Capa Livro 16 - A Cidade Submarina">
+    <h2>A Cidade Submarina</h2>
+    <p class="author">Autor: Ricardo Alves</p>
+    <p class="age">Faixa etária: 7-10 anos</p>
+    <p>Explore uma cidade cheia de mistérios no fundo do mar!</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book16"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book16"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book16"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book16">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="40" rx="18" ry="8" fill="#b2f7ef"/>
+            <ellipse cx="25" cy="35" rx="10" ry="4" fill="#00ced1"/>
+            <rect x="20" y="25" width="10" height="10" fill="#4682b4"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 17 -->
+<section class="book" id="book17">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2017/01/31/13/14/book-2022464_1280.png" alt="Capa Livro 17 - O Menino das Estrelas">
+    <h2>O Menino das Estrelas</h2>
+    <p class="author">Autor: Vitor Sousa</p>
+    <p class="age">Faixa etária: 6-9 anos</p>
+    <p>Um menino curioso viaja pelo universo em busca de novas estrelas.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book17"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book17"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book17"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book17">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <circle cx="25" cy="25" r="12" fill="#f0e68c"/>
+            <polygon points="25,12 28,22 38,22 30,28 33,38 25,32 17,38 20,28 12,22 22,22" fill="#ffd700"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 18 -->
+<section class="book" id="book18">
+    <img class="book-cover" src="https://cdn.pixabay.com/photo/2016/11/29/06/15/book-1868070_1280.jpg" alt="Capa Livro 18 - O Segredo do Lago">
+    <h2>O Segredo do Lago</h2>
+    <p class="author">Autor: Beatriz Faria</p>
+    <p class="age">Faixa etária: 8-10 anos</p>
+    <p>Um mistério submerso aguarda um grupo de amigos no lago da cidade.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book18"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book18"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book18"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book18">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="42" rx="18" ry="6" fill="#b0e0e6"/>
+            <ellipse cx="25" cy="35" rx="9" ry="4" fill="#48d1cc"/>
+            <rect x="15" y="28" width="20" height="6" fill="#3cb371"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 19 -->
+<section class="book" id="book19">
+    <img class="book-cover" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=300&h=400&facepad=3&q=80" alt="Capa Livro 19 - A Máquina do Tempo">
+    <h2>A Máquina do Tempo</h2>
+    <p class="author">Autor: André Oliveira</p>
+    <p class="age">Faixa etária: 9-12 anos</p>
+    <p>Duas crianças embarcam em uma aventura por diferentes épocas da história.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book19"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book19"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book19"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book19">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <circle cx="25" cy="25" r="15" fill="#ffe4b5"/>
+            <rect x="22" y="10" width="6" height="30" fill="#b0c4de"/>
+            <rect x="10" y="22" width="30" height="6" fill="#b0c4de"/>
+        </svg>
+    </div>
+</section>
+<!-- LIVRO 20 -->
+<section class="book" id="book20">
+    <img class="book-cover" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=300&h=400&facepad=3&q=80" alt="Capa Livro 20 - O Circo dos Bichos">
+    <h2>O Circo dos Bichos</h2>
+    <p class="author">Autor: Juliana Cardoso</p>
+    <p class="age">Faixa etária: 5-8 anos</p>
+    <p>Animais engraçados e talentosos se apresentam em um circo mágico.</p>
+    <div class="interactives">
+        <button class="like-btn" data-book="book20"><span class="icon-heart"></span> Curtir</button>
+        <button class="fav-btn" data-book="book20"><span class="icon-star"></span> Favoritar</button>
+        <button class="share-btn" data-book="book20"><span class="icon-share"></span> Compartilhar</button>
+        <span class="like-count" id="like-count-book20">0 curtidas</span>
+    </div>
+    <div class="svg-drawing">
+        <svg width="50" height="50">
+            <ellipse cx="25" cy="40" rx="17" ry="6" fill="#ffe4b5"/>
+            <ellipse cx="25" cy="30" rx="7" ry="5" fill="#87ceeb"/>
+            <polygon points="10,40 25,10 40,40" fill="#f08080"/>
+        </svg>
+    </div>
+</section>

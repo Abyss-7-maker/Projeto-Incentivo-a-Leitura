@@ -7,42 +7,95 @@ body {
 }
 
 header {
-    background-color: #ffb6c1;
+    background: linear-gradient(90deg, #ffb6c1, #b2f7ef 90%);
     text-align: center;
     padding: 30px 10px 20px 10px;
 }
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.6em;
+    color: #d55a8c;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #333;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 main {
-    padding: 30px 10px;
+    padding: 30px 10px 80px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    width: 100%;
+    max-width: 1100px;
+}
+
 .book {
     background-color: #fff;
     border: 2px solid #ff69b4;
-    border-radius: 20px;
-    padding: 20px 30px;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 450px;
+    border-radius: 18px;
+    padding: 18px 14px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 0 8px 24px #ffb6c133;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.book:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 14px 32px #ffb6c166;
+}
+
+.book-cover {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 3px solid #b2f7ef;
+    box-shadow: 0 3px 15px #32cd3222;
+    background: #e1e1e1;
 }
 
 .book h2 {
-    margin-top: 0;
+    margin: 0 0 2px 0;
     color: #d55a8c;
-    font-size: 1.4em;
+    font-size: 1.18em;
+    text-align: center;
+}
+
+.book .author,
+.book .age {
+    font-size: 0.98em;
+    color: #737373;
+    margin: 0;
+    text-align: center;
 }
 
 .book p {
-    font-size: 1.1em;
+    font-size: 1.05em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.interactives {
+    margin: 8px 0 3px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -50,20 +103,23 @@ button {
     color: #333;
     border: none;
     border-radius: 12px;
-    padding: 8px 15px;
+    padding: 8px 13px;
     margin-right: 7px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     font-size: 1em;
     font-family: inherit;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
+    transition: background 0.2s, color 0.2s, transform 0.18s;
     box-shadow: 0 2px 6px #d55a8c22;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 button:hover {
     background-color: #ff69b4;
     color: white;
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .favorited {
@@ -72,17 +128,38 @@ button:hover {
     font-weight: bold;
 }
 
-#like-count-book1,
-#like-count-book2 {
-    font-size: 0.95em;
-    margin-left: 5px;
+.like-count {
+    font-size: 0.93em;
     color: #d55a8c;
+    margin-left: 2px;
+}
+
+.svg-drawing {
+    margin-top: 7px;
+    margin-bottom: -4px;
+}
+
+.icon-heart::before {
+    content: "❤";
+    color: #ff69b4;
+    font-size: 1.1em;
+}
+
+.icon-star::before {
+    content: "★";
+    color: gold;
+    font-size: 1.1em;
+}
+
+.icon-share::before {
+    content: "🔗";
+    font-size: 1.1em;
 }
 
 footer {
     text-align: center;
     padding: 20px 10px 10px 10px;
-    background-color: #ffb6c1;
+    background: linear-gradient(90deg, #ffb6c1, #b2f7ef 90%);
     font-size: 1em;
     position: fixed;
     left: 0;
@@ -90,4 +167,3 @@ footer {
     width: 100%;
     box-shadow: 0 -2px 12px #ffb6c155;
 }
-

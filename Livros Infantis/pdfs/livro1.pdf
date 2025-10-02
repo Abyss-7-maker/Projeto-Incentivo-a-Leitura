@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca de Livros</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px;}
+        .livro-lista { margin-bottom: 30px;}
+        .livro-lista button { margin: 5px; }
+        .pdf-viewer { width: 100%; height: 600px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Biblioteca de Livros</h1>
+    <div class="livro-lista">
+        <button onclick="mostrarPDF('pdfs/livro1.pdf')">Livro 1 - Título Exemplo</button>
+        <button onclick="mostrarPDF('pdfs/livro2.pdf')">Livro 2 - Outro Título</button>
+        <!-- Adicione novos botões conforme necessário -->
+    </div>
+    <div>
+        <iframe id="pdfFrame" class="pdf-viewer" src="" frameborder="0"></iframe>
+    </div>
+    <script>
+        function mostrarPDF(pdfUrl) {
+            document.getElementById('pdfFrame').src = pdfUrl;
+        }
+    </script>
+    <p>Selecione um livro acima para visualizar o PDF aqui.</p>
+</body>
+</html>
